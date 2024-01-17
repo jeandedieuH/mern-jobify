@@ -53,7 +53,6 @@ const SearchContainer = () => {
           <Link className="btn btn-block form-btn" to="/dashboard/all-jobs">
             Reset Search Values
           </Link>
-          <SubmitBtn formBtn />
         </div>
       </Form>
     </Wrapper>
