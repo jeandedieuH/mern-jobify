@@ -1,6 +1,11 @@
-import { Outlet, redirect, useLoaderData } from "react-router-dom";
+import {
+  Outlet,
+  redirect,
+  useLoaderData,
+  useNavigation,
+} from "react-router-dom";
 import Wrapper from "../assets/wrappers/Dashboard";
-import { BigSidebar, Navbar, SmallSidebar } from "../components";
+import { BigSidebar, Navbar, SmallSidebar, Loading } from "../components";
 import { DashboardCtxProvider } from "../context/DashboardContext";
 import customFetch from "../../utils/customFetch";
 
@@ -15,6 +20,8 @@ export const loader = async () => {
 
 const DashboardLayout = () => {
   const data = useLoaderData();
+  const navigation = useNavigation();
+  const isPageLoading = navigation.state === "loading";
 
   return (
     <DashboardCtxProvider userData={data}>
@@ -25,7 +32,7 @@ const DashboardLayout = () => {
           <div>
             <Navbar />
             <div className="dashboard-page">
-              <Outlet context={{ data }} />
+              {isPageLoading ? <Loading /> : <Outlet />}
             </div>
           </div>
         </main>
