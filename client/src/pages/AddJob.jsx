@@ -1,7 +1,7 @@
 import { FormRow, SubmitBtn } from "../components";
 import { FormRowSelect } from "../components";
 import Wrapper from "../assets/wrappers/DashboardFormPage";
-import { JOB_STATUS, JOB_TYPE } from "../utils/constants";
+import { JOB_STATUS, JOB_TYPE } from "../../utils/constants";
 import { Form, redirect } from "react-router-dom";
 import { useDashboardContext } from "../context/DashboardContext";
 import customFetch from "../../utils/customFetch";
