@@ -1,6 +1,6 @@
 #### Complete App
 
-[Jobify](https://jobify.live/)
+[Jobify](https://jobify.jdhagena.com/)
 
 #### Create React APP
 
